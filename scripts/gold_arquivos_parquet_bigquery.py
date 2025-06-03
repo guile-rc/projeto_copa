@@ -16,7 +16,7 @@ def carregar_pastas_para_bigquery(bucket_name, base_path, dataset_id):
             pastas.add(partes[2]) 
 
     for pasta in sorted(pastas):
-        print(f"\n🔷 Carregando arquivos da pasta '{pasta}'...")
+        print(f"\nCarregando arquivos da pasta '{pasta}'...")
         arquivos_parquet = []
 
         for blob in blobs:
@@ -47,7 +47,8 @@ def carregar_pastas_para_bigquery(bucket_name, base_path, dataset_id):
         load_job.result()
         print(f"Tabela '{pasta}' carregada com sucesso com {len(arquivos_parquet)} arquivos.")
 
-# EXECUTARif __name__ == "__main__":
+# EXECUTAR
+if __name__ == "__main__":
 
     # CONFIGURAÇÕES
     project_id = 'fine-slice-304523'
