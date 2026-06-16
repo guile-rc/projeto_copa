@@ -19,8 +19,8 @@ client = storage.Client.from_service_account_info(
     st.secrets["gcp_service_account"]
 )
 
-bucket_nome = "bucket-copa"
-arquivo = "imagens_jogadores/ale_1.jpg"
+bucket_nome = "bucket-koopa"
+arquivo = "imagens_jogadores/bra_1.jpg"
 
 bucket = client.bucket(bucket_nome)
 blob = bucket.blob(arquivo)
