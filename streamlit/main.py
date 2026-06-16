@@ -20,10 +20,23 @@ client = storage.Client.from_service_account_info(
 )
 
 bucket_nome = "bucket-koopa"
-arquivo = "imagens_jogadores/bra_1.jpg"
+arquivo1 = "imagens_jogadores/bra_7.jpg"
+arquivo2 = "imagens_jogadores/bra_10.jpg"
 
 bucket = client.bucket(bucket_nome)
-blob = bucket.blob(arquivo)
+blob = bucket.blob(arquivo1)
+
+imagem_bytes = blob.download_as_bytes()
+
+imagem = Image.open(BytesIO(imagem_bytes))
+
+st.image(
+    imagem,
+    caption="Imagem do Datalake - Google Cloud Storage"
+)
+
+bucket = client.bucket(bucket_nome)
+blob = bucket.blob(arquivo2)
 
 imagem_bytes = blob.download_as_bytes()
 
