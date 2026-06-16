@@ -11,11 +11,11 @@ from google.cloud import storage
 # CONFIGURACOES — edite apenas esta secao
 # =============================================================
 # caminho para o seu arquivo .json de credenciais do GCP
-CREDENTIALS_PATH = "credenciais.json" 
+CREDENTIALS_PATH = "../../projeto-koopa-grc7.json" 
 # nome do bucket que voce criou no Datalake para armazenar as imagens  
-BUCKET_NAME      = "bucket-copa"
+BUCKET_NAME      = "bucket-koopa"
 # pasta local onde estao as imagens que voce quer enviar para o GCS    
-PASTA_IMAGENS    = "images" 
+PASTA_IMAGENS    = "../imagens" 
 # prefixo (pasta) dentro do bucket onde as imagens serao armazenadas no GCS           
 DESTINO_GCS      = "imagens_jogadores/"           
 
